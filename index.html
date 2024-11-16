@@ -1,1 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>科技感網頁</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
 
+        body {
+            background: #f0f2f5;
+            color: #2c3e50;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2196F3;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #5a6d7e;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #2196F3;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+            background: linear-gradient(45deg, #e8edf2 0%, #f5f7fa 100%);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #5a6d7e;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #2196F3;
+            border: none;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(33, 150, 243, 0.3);
+        }
+
+        .button:hover {
+            background: #1976D2;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.4);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            background: #ffffff;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: #5a6d7e;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* 新增金屬光澤效果 */
+        .metallic {
+            background: linear-gradient(135deg, 
+                #ffffff 0%, 
+                #f5f5f5 50%, 
+                #e8e8e8 51%, 
+                #ffffff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-logo metallic">TECH</div>
+        <div class="nav-links">
+            <a href="#home">首頁</a>
+            <a href="#about">關於</a>
+            <a href="#contact">聯絡</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="floating-element metallic">創新科技解決方案</h1>
+            <p>我們致力於提供最前沿的技術服務，為您的業務帶來革新性的改變。透過創新思維，打造更美好的數位未來。</p>
+            <a href="#contact" class="button">了解更多</a>
+        </div>
+    </section>
+
+    <div class="grid">
+        <div class="card">
+            <h3>人工智慧</h3>
+            <p>運用先進的AI技術，為您的企業提供智能化解決方案。</p>
+        </div>
+        <div class="card">
+            <h3>區塊鏈</h3>
+            <p>安全可靠的區塊鏈技術，確保您的數據安全與透明。</p>
+        </div>
+        <div class="card">
+            <h3>雲端運算</h3>
+            <p>高效能的雲端服務，幫助您的業務快速成長。</p>
+        </div>
+    </div>
+</body>
+</html>
